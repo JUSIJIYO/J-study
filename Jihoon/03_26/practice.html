@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const name = 'Tom';
+
+        const divPaint = <div> {name} </div>
+        ReactDOM.createRoot(document.getElementById('root')).render(divPaint);
+    </script>
+
+    <hr>
+
+    <div id="root1"></div>
+    <script type="text/babel">
+        const car = {
+            model: 'sorento',
+            price: 4000,
+        }
+
+        const divPaint2 = <div> {car.model} </div>
+
+        ReactDOM.createRoot(document.getElementById('root1')).render(divPaint2);
+    </script>
+
+    <hr>
+
+    <div id="root2"></div>
+    <script type="text/babel">
+        const score = 80;
+
+        const condition = score >= 60 ? "합격" : "불합격";
+
+        const divPaint3 = <div> {condition} </div>
+
+        ReactDOM.createRoot(document.getElementById('root2')).render(divPaint3);
+    </script>
+
+    <hr>
+
+    <div id="root3"></div>
+    <script type="text/babel">
+        let value;
+
+        const condition2 = value === undefined || value === null || value === 0 ? "값없음" : "값있음"
+
+        const divPaint4 = <div> {condition2} </div>
+
+        ReactDOM.createRoot(document.getElementById('root3')).render(divPaint4);
+    </script>
+
+    <hr>
+
+    <div id="root4"></div>
+    <script type="text/babel">
+        const color = 'b';
+
+        const ifRed = {
+            width: 100,
+            height: 100,
+            backgroundColor: "red"
+        }
+
+        const ifgreen = {
+            width: 100,
+            height: 100,
+            backgroundColor: "green"
+        }
+
+        const ifblue = {
+            width: 100,
+            height: 100,
+            backgroundColor: "blue"
+        }
+
+
+        function condition3(colors) {
+            if (color === 'r') {
+                return <div style={ifRed}></div>
+            } else if (color === 'g') {
+                return<div style={ifgreen}></div>
+            } else if(color === 'b') {
+                return<div style={ifblue}> </div>
+            }
+        }
+
+            ReactDOM.createRoot(document.getElementById('root4')).render(condition3());
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+        <script type="text/babel">
+            const name = 'Tom';
+            
+            const car = {
+                model: 'sorento',
+                price: 4000,
+            }
+
+            const score = 80;
+
+            const resultMessage = score >= 60
+            ? <span>합격</span>
+            : <span>불합격</span>
+
+            let value;
+
+            const color = 'r';
+
+            let bgColor = '';
+            if (color == 'r') bgColor = 'red';
+            else if (color == 'g') bgColor = 'green';
+            else if (color == 'b') bgColor = 'blue';
+
+            const style = {
+                width: '100px',
+                height : '100px',
+                backgroundColor : bgColor,
+            };
+
+            const element = (
+                <>
+                <div>{name}</div>
+                <div>{car.model}</div>
+                <div>{resultMessage}</div>
+                <div>{value || '값없음'}</div>
+                <div style={style}></div>
+                </>
+        );
+        ReactDOM.createRoot(document.getElementById('root')).render(element);
+        </script>
+
+
+    </div>
+</body>
+</html>

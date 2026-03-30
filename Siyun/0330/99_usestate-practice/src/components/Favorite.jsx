@@ -36,7 +36,7 @@ function Favorite() {
       </h4>
 
       <h4>선택한 색상 : {selectedValue1}</h4>
-      <h4>선택한 rhkdlf : {selectedValue2}</h4>
+      <h4>선택한 과일 : {selectedValue2}</h4>
     </>
   );
 }

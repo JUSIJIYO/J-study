@@ -17,7 +17,6 @@ function Hooks() {
     
     if (inputValue === userPrompt) {
       alert(`${Date.now() - inputTime}ms`);
-      return null;
     }
   }
   return (

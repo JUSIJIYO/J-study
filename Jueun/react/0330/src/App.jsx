@@ -3,6 +3,7 @@ import Favorite from "./components/Favorite";
 import Hobby from "./components/Hobby";
 import ToggleSwitch from "./components/ToggleSwitch";
 import UserInfo from "./components/UserInfo";
+import Hooks from "./components/Hooks";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
       <h2>취미 선택</h2>
       <Hobby />
       <hr />
+
+      <Hooks />
     </>
   );
 }

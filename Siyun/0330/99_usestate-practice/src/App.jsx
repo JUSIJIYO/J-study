@@ -1,6 +1,7 @@
 import Counter from './components/Counter';
 import Favorite from './components/Favorite';
 import Hobby from './components/Hobby';
+import Hooks from './components/Hooks';
 import ToggleSwitch from './components/ToggleSwitch';
 import UserInfo from './components/UserInfo';
 
@@ -31,6 +32,8 @@ function App() {
       <h2>취미 선택</h2>
       <Hobby />
       <hr />
+      {/*0331_프로젝트 과제 */}
+      <Hooks />
     </>
   );
 }

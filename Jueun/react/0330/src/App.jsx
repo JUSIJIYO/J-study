@@ -1,6 +1,6 @@
 import Counter from "./components/Counter";
 import Favorite from "./components/Favorite";
-// import Hobby from "./components/Hobby";
+import Hobby from "./components/Hobby";
 import ToggleSwitch from "./components/ToggleSwitch";
 import UserInfo from "./components/UserInfo";
 
@@ -14,7 +14,8 @@ function App() {
       <hr />
 
       {/* 2) 사용자 정보 컴포넌트 제작 */}
-      <h2>사용자 정보</h2>
+      <h2>사용자 정보</h2>S
+
       <UserInfo />
       <hr />
 
@@ -30,7 +31,7 @@ function App() {
 
       {/* 5) 취미 선택 컴포넌트 제작 */}
       <h2>취미 선택</h2>
-      {/* <Hobby /> */}
+      <Hobby />
       <hr />
     </>
   );

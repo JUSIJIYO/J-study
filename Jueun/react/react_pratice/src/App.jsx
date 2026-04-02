@@ -4,12 +4,20 @@ import Hobby from "./components/Hobby";
 import ToggleSwitch from "./components/ToggleSwitch";
 import UserInfo from "./components/UserInfo";
 import Hooks from "./components/Hooks";
+import ToDo from "./components/ToDo";
+import React, { createContext, useState } from 'react'
+import Carculator from "./components/Carculator";
+import ItemSelect from "./components/ItemSelect";
+import LoginForm from "./components/LoginForm";
 
+export const NameContext=createContext();
 
 function App() {
+
+  const [names, setNames] = useState([])
   return (
     <>
-
+      
       {/* 1) 카운터 컴포넌트 제작 */}
       <h2>카운터</h2>
       <Counter />
@@ -36,9 +44,28 @@ function App() {
       <Hobby />
       <hr />
 
-      <Hooks />
 
+      {/* 6) hook */}
+      {/* <Hooks /> */}
+      <hr />
 
+      {/* 7) 할일목록 */}
+      <NameContext.Provider value={{names,setNames}}>
+          <ToDo />
+      </NameContext.Provider>
+      <hr />
+
+     {/* 8) 간단한 계산기   */}
+     <Carculator />
+    <hr />
+
+     {/* 9) 아이템선택*/}
+     <ItemSelect />
+    <hr />
+    
+     {/* 10) 로그인 폼 */}
+    <LoginForm />
+    <hr />
     </>
   );
 }

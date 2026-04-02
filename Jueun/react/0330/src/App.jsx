@@ -5,6 +5,7 @@ import ToggleSwitch from "./components/ToggleSwitch";
 import UserInfo from "./components/UserInfo";
 import Hooks from "./components/Hooks";
 
+
 function App() {
   return (
     <>
@@ -36,6 +37,8 @@ function App() {
       <hr />
 
       <Hooks />
+
+
     </>
   );
 }

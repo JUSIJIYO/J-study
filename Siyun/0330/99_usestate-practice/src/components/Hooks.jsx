@@ -15,7 +15,7 @@ function Hooks() {
     const value = e.target.value;
     setInputText(value);
 
-    if (value == targetText && targetText !== '') {
+    if (value == targetText && targetText == '') {
       const endTime = Date.now();
       const result = endTime - time;
       alert(result + '(ms)');

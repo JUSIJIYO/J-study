@@ -1,0 +1,19 @@
+useContext
+: 컴포넌트 트리 전체에서 데이터 공유할 때 사용하는 Hook
+ props 일일이 전달 안해도 원하는 값 가져올 수 있음!! (drilling 해결)
+ - 사용 이유
+  : 여러 컴포넌트에서 공통 데이터 사용할 때!
+   props 계속 내려주는 번거로움 줄이려고
+
+const MyContext = createContext(); -> 선언 후
+function App() {
+  return (
+    <MyContext.Provider value="Hello"> -> MyContext.Provider로 묶어서 값 전달
+      <Child />
+    </MyContext.Provider>
+  );
+}
+function Child() {
+  const value = useContext(MyContext); -> useContext로 값 꺼내기
+  return <div>{value}</div>;
+}

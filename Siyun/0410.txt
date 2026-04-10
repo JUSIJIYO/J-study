@@ -1,0 +1,26 @@
+[Firebase Authentication 기본 정리]
+
+1. 회원가입 (Sign Up)
+- createUserWithEmailAndPassword(auth, email, password)
+- 이메일과 비밀번호로 사용자 생성
+- 반환값(userCredential)에서 user 정보 확인 가능
+
+2. 로그인 (Login)
+- signInWithEmailAndPassword(auth, email, password)
+- 로그인 성공 시 user 객체 반환
+
+3. 로그아웃 (Logout)
+- signOut(auth)
+- 현재 로그인된 사용자 로그아웃 처리
+
+4. 사용자 정보
+- auth.currentUser → 현재 로그인된 사용자 정보
+- uid, email, displayName, photoURL 확인 가능
+
+5. 비동기 처리
+- Firebase Auth 함수는 모두 async/await 사용 필수
+- await 없이 실행 시 Promise 상태로 반환됨
+
+[핵심]
+Firebase Authentication을 통해
+회원가입, 로그인, 로그아웃 기능을 비동기로 구현 가능
